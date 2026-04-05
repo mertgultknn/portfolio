@@ -89,13 +89,11 @@
     /* Session gallery */
     .session-gallery { margin-top: 1.5rem; }
     .session-gallery-label { font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--warm-light); margin-bottom: 1rem; }
-    .session-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px,1fr)); gap: 0.8rem; }
+    .session-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px,1fr)); gap: 1rem; align-items: start; }
     .session-item { position: relative; overflow: hidden; border-radius: 2px; }
-    .session-item.photo { aspect-ratio: 4/3; }
-    .session-item.video { aspect-ratio: 16/9; background: #000; }
-    .session-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s; filter: grayscale(15%); }
-    .session-item video { width: 100%; height: 100%; object-fit: cover; display: block; }
-    .session-item:hover img { transform: scale(1.04); filter: grayscale(0%); }
+    .session-item img { width: 100%; height: auto; display: block; transition: transform 0.4s; filter: grayscale(15%); }
+    .session-item video { width: 100%; height: auto; display: block; max-height: 480px; background: #000; }
+    .session-item:hover img { transform: scale(1.02); filter: grayscale(0%); }
     .session-item-caption { position: absolute; bottom: 0; left: 0; right: 0; padding: 0.6rem 0.8rem; background: linear-gradient(transparent, rgba(42,40,37,0.65)); color: rgba(244,241,236,0.9); font-family: var(--mono); font-size: 0.58rem; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0; transition: opacity 0.3s; pointer-events: none; }
     .session-item:hover .session-item-caption { opacity: 1; }
 
@@ -199,7 +197,7 @@
   </div>
   <div class="hero-visual fade-in" style="transition-delay:0.2s">
     <div class="hero-img-wrap">
-      <img src="images/hogan-studio.jpg" alt="Mert Gültekin — Stüdyo" />
+      <img src="images/mert.jpg" alt="Mert Gültekin" />
     </div>
   </div>
 </section>
@@ -450,8 +448,12 @@
       </div>
     </div>
     <div class="contact-links fade-in" style="transition-delay:0.15s">
-      <a class="contact-link" href="mailto:mert.gultknn@gmail.com">
-        <div><div class="contact-link-label">E-Posta</div><div class="contact-link-value">mert.gultknn@gmail.com</div></div>
+      <a class="contact-link" href="mailto:mert.gultknn&#64;gmail.com">
+        <div><div class="contact-link-label">E-Posta</div><div class="contact-link-value">mert.gultknn&#64;gmail.com</div></div>
+        <span class="contact-arrow">↗</span>
+      </a>
+      <a class="contact-link" href="tel:+905538906165">
+        <div><div class="contact-link-label">Telefon</div><div class="contact-link-value">+90 553 890 6165</div></div>
         <span class="contact-arrow">↗</span>
       </a>
       <a class="contact-link" href="https://instagram.com/ghoultekin" target="_blank" rel="noopener">
@@ -504,10 +506,4 @@
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('.nav-links a');
   window.addEventListener('scroll', () => {
-    let current = '';
-    sections.forEach(s => { if (window.scrollY >= s.offsetTop - 120) current = s.id; });
-    navLinks.forEach(a => { a.style.color = a.getAttribute('href') === '#' + current ? 'var(--charcoal)' : ''; });
-  });
-</script>
-</body>
-</html>
+    let c
