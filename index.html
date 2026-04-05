@@ -3,17 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mert Gültekin — Ses Mühendisi</title>
+  <title>Mert Gultekin - Ses Muhendisi</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --bg: #F4F1EC; --surface: #EDEAE3; --surface2: #E4E0D8;
-      --charcoal: #2A2825; --charcoal-soft: #3D3A36;
-      --warm-mid: #7A7570; --warm-light: #B0AA9F;
-      --accent: #8B6F5E; --accent-light: #C4A99A;
+      --bg: #F4F1EC;
+      --surface: #EDEAE3;
+      --surface2: #E4E0D8;
+      --charcoal: #2A2825;
+      --charcoal-soft: #3D3A36;
+      --warm-mid: #7A7570;
+      --warm-light: #B0AA9F;
+      --accent: #8B6F5E;
+      --accent-light: #C4A99A;
       --border: rgba(42,40,37,0.12);
       --serif: 'Cormorant Garamond', Georgia, serif;
       --mono: 'DM Mono', monospace;
@@ -22,7 +27,7 @@
     body { background: var(--bg); color: var(--charcoal); font-family: var(--serif); font-weight: 300; line-height: 1.7; overflow-x: hidden; }
 
     /* NAV */
-    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; padding: 1.4rem 3rem; background: rgba(244,241,236,0.9); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; padding: 1.4rem 3rem; background: rgba(244,241,236,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
     .nav-logo { font-size: 1rem; font-weight: 400; letter-spacing: 0.12em; text-transform: uppercase; color: var(--charcoal); text-decoration: none; }
     .nav-links { display: flex; gap: 2rem; list-style: none; flex-wrap: wrap; }
     .nav-links a { font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--warm-mid); text-decoration: none; transition: color 0.2s; }
@@ -55,7 +60,7 @@
     .about-body p { font-size: 1.2rem; color: var(--charcoal-soft); line-height: 1.8; margin-bottom: 1.5rem; }
     .about-services { margin-top: 2.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem 2rem; }
     .service-item { display: flex; align-items: flex-start; gap: 0.7rem; font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.05em; color: var(--warm-mid); text-transform: uppercase; }
-    .service-item::before { content: '—'; color: var(--accent); flex-shrink: 0; }
+    .service-item::before { content: '-'; color: var(--accent); flex-shrink: 0; }
 
     /* PROJELER */
     #projeler { background: var(--bg); }
@@ -67,15 +72,15 @@
     .project-meta { padding: 1.4rem 1.6rem; }
     .project-meta h3 { font-size: 1.1rem; font-weight: 400; margin-bottom: 0.4rem; }
     .project-meta p { font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--warm-mid); }
+    .other-works { margin-top: 1rem; }
     .other-works h3 { font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--warm-mid); margin-bottom: 1.2rem; }
     .other-link { display: flex; align-items: center; gap: 1rem; padding: 1rem 1.4rem; background: var(--surface); border: 1px solid var(--border); text-decoration: none; color: var(--charcoal); margin-bottom: 0.6rem; transition: background 0.2s; }
     .other-link:hover { background: var(--surface2); }
     .other-link span { font-size: 1rem; font-weight: 400; }
     .other-link small { font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--warm-mid); margin-left: auto; }
 
-    /* MÜZİK */
+    /* MUZIK */
     #muzik { background: var(--surface); }
-    .artist-block { margin-bottom: 0; }
     .artist-block + .artist-block { margin-top: 3rem; padding-top: 3rem; border-top: 1px solid var(--border); }
     .artist-header { margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid var(--border); }
     .artist-header h3 { font-size: 1.4rem; font-weight: 400; margin-bottom: 0.3rem; }
@@ -84,9 +89,9 @@
     .spotify-embed iframe { display: block; border-radius: 12px; }
     .audio-player-wrap { margin-bottom: 1.5rem; }
     .audio-player-label { font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--warm-mid); margin-bottom: 0.5rem; }
-    .audio-player-wrap audio { width: 100%; accent-color: var(--accent); display: block; }
+    .audio-player-wrap audio { width: 100%; display: block; accent-color: var(--accent); }
 
-    /* Session gallery */
+    /* SESSION GALLERY */
     .session-gallery { margin-top: 1.5rem; }
     .session-gallery-label { font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--warm-light); margin-bottom: 1rem; }
     .session-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px,1fr)); gap: 1rem; align-items: start; }
@@ -94,8 +99,8 @@
     .session-item img { width: 100%; height: auto; display: block; transition: transform 0.4s; filter: grayscale(15%); }
     .session-item video { width: 100%; height: auto; display: block; max-height: 480px; background: #000; }
     .session-item:hover img { transform: scale(1.02); filter: grayscale(0%); }
-    .session-item-caption { position: absolute; bottom: 0; left: 0; right: 0; padding: 0.6rem 0.8rem; background: linear-gradient(transparent, rgba(42,40,37,0.65)); color: rgba(244,241,236,0.9); font-family: var(--mono); font-size: 0.58rem; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0; transition: opacity 0.3s; pointer-events: none; }
-    .session-item:hover .session-item-caption { opacity: 1; }
+    .session-caption { position: absolute; bottom: 0; left: 0; right: 0; padding: 0.6rem 0.8rem; background: linear-gradient(transparent, rgba(42,40,37,0.65)); color: rgba(244,241,236,0.9); font-family: var(--mono); font-size: 0.58rem; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0; transition: opacity 0.3s; pointer-events: none; }
+    .session-item:hover .session-caption { opacity: 1; }
 
     /* BANDCAMP */
     #bandcamp { background: var(--bg); }
@@ -111,19 +116,19 @@
     .ab-btn { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.7rem 2rem; border: none; background: transparent; color: var(--warm-mid); cursor: pointer; transition: background 0.2s, color 0.2s; }
     .ab-btn.active { background: var(--charcoal); color: var(--bg); }
     .ab-version-label { font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.8rem; }
-    audio.ab-player { width: 100%; margin-bottom: 1.5rem; accent-color: var(--accent); display: block; }
+    .ab-player { width: 100%; margin-bottom: 1.5rem; display: block; accent-color: var(--accent); }
     .ab-info { font-size: 0.9rem; color: var(--warm-mid); line-height: 1.6; }
 
-    /* GALERİ */
+    /* GALERI */
     #galeri { background: var(--bg); }
     .gallery-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1rem; }
-    .gallery-item { position: relative; overflow: hidden; aspect-ratio: 4/5; cursor: pointer; }
+    .gallery-item { position: relative; overflow: hidden; aspect-ratio: 4/5; }
     .gallery-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s; filter: grayscale(20%); }
     .gallery-item:hover img { transform: scale(1.04); filter: grayscale(0%); }
     .gallery-caption { position: absolute; bottom: 0; left: 0; right: 0; padding: 1rem; background: linear-gradient(transparent,rgba(42,40,37,0.7)); color: rgba(244,241,236,0.9); font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0; transition: opacity 0.3s; }
     .gallery-item:hover .gallery-caption { opacity: 1; }
 
-    /* İLETİŞİM */
+    /* ILETISIM */
     #iletisim { background: var(--charcoal); color: var(--bg); }
     #iletisim .section-label { color: var(--accent-light); }
     #iletisim .section-title { color: var(--bg); }
@@ -171,33 +176,37 @@
 
 <!-- NAV -->
 <nav>
-  <a class="nav-logo" href="#hero">Mert Gültekin</a>
+  <a class="nav-logo" href="#hero">Mert Gultekin</a>
   <ul class="nav-links">
-    <li><a href="#hakkimda">Hakkımda</a></li>
+    <li><a href="#hakkimda">Hakkimda</a></li>
     <li><a href="#projeler">Projeler</a></li>
-    <li><a href="#muzik">Müzik</a></li>
+    <li><a href="#muzik">Muzik</a></li>
     <li><a href="#bandcamp">Bandcamp</a></li>
     <li><a href="#karsilastirma">A/B</a></li>
     <li><a href="#galeri">Galeri</a></li>
-    <li><a href="#iletisim">İletişim</a></li>
+    <li><a href="#iletisim">Iletisim</a></li>
   </ul>
 </nav>
 
 <!-- HERO -->
 <section id="hero">
   <div class="hero-text fade-in">
-    <span class="hero-eyebrow">Ses Mühendisi · Prodüktör · Miks & Mastering</span>
-    <h1 class="hero-name">Mert<br><em>Gültekin</em></h1>
-    <p class="hero-desc">Teknik bir zihniyet ve sosyal bir yaklaşım ile ses mühendisi.</p>
+    <span class="hero-eyebrow">Ses Muhendisi &middot; Produktor &middot; Miks &amp; Mastering</span>
+    <h1 class="hero-name">Mert<br><em>Gultekin</em></h1>
+    <p class="hero-desc">Teknik bir zihniyet ve sosyal bir yaklasim ile ses muhendisi.</p>
     <div class="hero-tags">
-      <span class="tag">Kayıt</span><span class="tag">Miks</span><span class="tag">Mastering</span>
-      <span class="tag">Prodüksiyon</span><span class="tag">Aranje</span>
-      <span class="tag">Foley</span><span class="tag">Diyalog</span>
+      <span class="tag">Kayit</span>
+      <span class="tag">Miks</span>
+      <span class="tag">Mastering</span>
+      <span class="tag">Produksiyon</span>
+      <span class="tag">Aranje</span>
+      <span class="tag">Foley</span>
+      <span class="tag">Diyalog</span>
     </div>
   </div>
   <div class="hero-visual fade-in" style="transition-delay:0.2s">
     <div class="hero-img-wrap">
-      <img src="images/mert.jpg" alt="Mert Gültekin" />
+      <img src="images/mert.jpg" alt="Mert Gultekin" />
     </div>
   </div>
 </section>
@@ -208,17 +217,21 @@
 <section id="hakkimda">
   <div class="about-grid">
     <div class="about-sticky fade-in">
-      <span class="section-label">01 — Hakkımda</span>
+      <span class="section-label">01 &mdash; Hakkimda</span>
       <h2 class="section-title">Ses ile<br><em>hikaye</em><br>anlatmak.</h2>
     </div>
     <div class="about-body fade-in" style="transition-delay:0.15s">
-      <p>Mert Gültekin; kayıt, miks, mastering ve prodüksiyon alanlarında çalışan bir ses mühendisidir. Teknik bilgisini sanatsal bir bakış açısıyla birleştirerek her projeye özgün bir ses kimliği kazandırır.</p>
-      <p>Animasyon ses tasarımından canlı kayıt prodüksiyonuna, bağımsız müzisyenlerle yaptığı çalışmalardan kısa filmlere kadar geniş bir yelpazede deneyime sahiptir.</p>
+      <p>Mert Gultekin; kayit, miks, mastering ve produksiyon alanlarinda calisan bir ses muhendisidir. Teknik bilgisini sanatsal bir bakis acisiyla birlestirerek her projeye ozgun bir ses kimligi kazandirir.</p>
+      <p>Animasyon ses tasarimindan canli kayit produksiyonuna, bagimsiz muzisyenlerle yaptigi calismalardan kisa filmlere kadar genis bir yelpazede deneyime sahiptir.</p>
       <div class="about-services">
-        <div class="service-item">Kayıt</div><div class="service-item">Miks</div>
-        <div class="service-item">Mastering</div><div class="service-item">Prodüksiyon</div>
-        <div class="service-item">Aranje</div><div class="service-item">Foley Tasarımı</div>
-        <div class="service-item">Diyalog Kaydı</div><div class="service-item">Ses Supervizörlüğü</div>
+        <div class="service-item">Kayit</div>
+        <div class="service-item">Miks</div>
+        <div class="service-item">Mastering</div>
+        <div class="service-item">Produksiyon</div>
+        <div class="service-item">Aranje</div>
+        <div class="service-item">Foley Tasarimi</div>
+        <div class="service-item">Diyalog Kaydi</div>
+        <div class="service-item">Ses Supervizörlügü</div>
       </div>
     </div>
   </div>
@@ -228,16 +241,16 @@
 
 <!-- PROJELER -->
 <section id="projeler">
-  <span class="section-label">02 — Projeler</span>
-  <h2 class="section-title">Seçili<br><em>çalışmalar.</em></h2>
+  <span class="section-label">02 &mdash; Projeler</span>
+  <h2 class="section-title">Secili<br><em>calismalar.</em></h2>
   <div class="projects-grid">
     <div class="project-card fade-in">
       <div class="project-embed">
         <iframe src="https://www.youtube.com/embed/9UpJH5VfDKg" title="Animasyon 1" allowfullscreen loading="lazy"></iframe>
       </div>
       <div class="project-meta">
-        <h3>Animasyon — Diyalog, Foley & Miks</h3>
-        <p>Diyalog kaydı · Foley · Miks · Ses Supervizörlüğü</p>
+        <h3>Animasyon &mdash; Diyalog, Foley &amp; Miks</h3>
+        <p>Diyalog kaydi &middot; Foley &middot; Miks &middot; Ses Supervizörlügü</p>
       </div>
     </div>
     <div class="project-card fade-in" style="transition-delay:0.1s">
@@ -245,77 +258,78 @@
         <iframe src="https://www.youtube.com/embed/-YElgi5B-bo" title="Animasyon 2" allowfullscreen loading="lazy"></iframe>
       </div>
       <div class="project-meta">
-        <h3>Animasyon — Diyalog, Foley & Miks</h3>
-        <p>Diyalog kaydı · Foley · Miks</p>
+        <h3>Animasyon &mdash; Diyalog, Foley &amp; Miks</h3>
+        <p>Diyalog kaydi &middot; Foley &middot; Miks</p>
       </div>
     </div>
   </div>
   <div class="other-works fade-in">
-    <h3>Diğer İşler</h3>
+    <h3>Diger Isler</h3>
     <a class="other-link" href="https://youtu.be/sgR-FwNvzMA" target="_blank" rel="noopener">
-      <span>Kısa Film</span><small>↗ YouTube</small>
+      <span>Kisa Film</span>
+      <small>&#8599; YouTube</small>
     </a>
   </div>
 </section>
 
 <hr class="divider" />
 
-<!-- MÜZİK -->
+<!-- MUZIK -->
 <section id="muzik">
-  <span class="section-label">03 — Müzik</span>
-  <h2 class="section-title">Prodüksiyon &<br><em>kayıt çalışmaları.</em></h2>
+  <span class="section-label">03 &mdash; Muzik</span>
+  <h2 class="section-title">Produksiyon &amp;<br><em>kayit calismalari.</em></h2>
 
   <!-- VAMPIRE -->
   <div class="artist-block fade-in">
     <div class="artist-header">
       <h3>Vampire</h3>
-      <div class="artist-roles">Kayıt · Miks · Mastering · Aranje</div>
+      <div class="artist-roles">Kayit &middot; Miks &middot; Mastering &middot; Aranje</div>
     </div>
     <div class="spotify-embed">
       <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/6MOgtbOSKfLDkriUT7xVap?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
     </div>
     <div class="session-gallery">
-      <div class="session-gallery-label">Kayıt Seansından</div>
+      <div class="session-gallery-label">Kayit Seansinden</div>
       <div class="session-grid">
-        <div class="session-item photo">
-          <img src="images/vampire-rig.jpg" alt="Vampire — Rig setup" />
-          <div class="session-item-caption">Rig setup</div>
+        <div class="session-item">
+          <img src="images/vampire-rig.jpg" alt="Vampire rig" />
+          <div class="session-caption">Rig setup</div>
         </div>
-        <div class="session-item video">
+        <div class="session-item">
           <video src="images/vampire-drum.mp4" controls muted playsinline preload="none"></video>
         </div>
-        <div class="session-item video">
+        <div class="session-item">
           <video src="images/vampire-drum2.mp4" controls muted playsinline preload="none"></video>
         </div>
-        <div class="session-item video">
+        <div class="session-item">
           <video src="images/vampire-vox.mp4" controls muted playsinline preload="none"></video>
         </div>
-        <div class="session-item video">
+        <div class="session-item">
           <video src="images/vampire-vox2.mp4" controls muted playsinline preload="none"></video>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- MALUS INCOGNİTA -->
+  <!-- MALUS INCOGNITA -->
   <div class="artist-block fade-in">
     <div class="artist-header">
       <h3>Malus Incognita</h3>
-      <div class="artist-roles">Kayıt · Miks · Mastering · Aranje</div>
+      <div class="artist-roles">Kayit &middot; Miks &middot; Mastering &middot; Aranje</div>
     </div>
     <div class="audio-player-wrap">
-      <div class="audio-player-label">Malus Incognita — VOID-OUT</div>
+      <div class="audio-player-label">Malus Incognita &mdash; VOID-OUT</div>
       <audio controls preload="none">
         <source src="audio/Malus Incognita - VOID-OUT.mp3" type="audio/mpeg" />
       </audio>
     </div>
     <div class="session-gallery">
-      <div class="session-gallery-label">Kayıt Seansından</div>
+      <div class="session-gallery-label">Kayit Seansinden</div>
       <div class="session-grid">
-        <div class="session-item video">
+        <div class="session-item">
           <video src="images/malus-fx.mp4" controls muted playsinline preload="none"></video>
         </div>
-        <div class="session-item video">
+        <div class="session-item">
           <video src="images/malus-guitar.mp4" controls muted playsinline preload="none"></video>
         </div>
       </div>
@@ -325,28 +339,28 @@
   <!-- BODYWIRE -->
   <div class="artist-block fade-in">
     <div class="artist-header">
-      <h3>Bodywire — It's Fine</h3>
-      <div class="artist-roles">Kayıt</div>
+      <h3>Bodywire &mdash; It's Fine</h3>
+      <div class="artist-roles">Kayit</div>
     </div>
     <div class="spotify-embed">
       <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5z4dJ5hyGk8UzaBA29m4ia?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
     </div>
-    <div class="audio-player-wrap" style="margin-top:1rem;">
-      <div class="audio-player-label">Bodywire — It's Fine (Ham Kayıt)</div>
+    <div class="audio-player-wrap" style="margin-top:1rem">
+      <div class="audio-player-label">Bodywire &mdash; It's Fine (Ham Kayit)</div>
       <audio controls preload="none">
         <source src="audio/Bodywire - It's Fine.mp3" type="audio/mpeg" />
       </audio>
     </div>
     <div class="session-gallery">
-      <div class="session-gallery-label">Kayıt Seansından</div>
+      <div class="session-gallery-label">Kayit Seansinden</div>
       <div class="session-grid">
-        <div class="session-item photo">
-          <img src="images/body-rig.jpg" alt="Bodywire — Rig" />
-          <div class="session-item-caption">Rig setup</div>
+        <div class="session-item">
+          <img src="images/body-rig.jpg" alt="Bodywire rig" />
+          <div class="session-caption">Rig setup</div>
         </div>
-        <div class="session-item photo">
-          <img src="images/body-vox.jpg" alt="Bodywire — Vokal" />
-          <div class="session-item-caption">Vokal kaydı</div>
+        <div class="session-item">
+          <img src="images/body-vox.jpg" alt="Bodywire vokal" />
+          <div class="session-caption">Vokal kaydi</div>
         </div>
       </div>
     </div>
@@ -357,8 +371,8 @@
 
 <!-- BANDCAMP -->
 <section id="bandcamp">
-  <span class="section-label">04 — Bandcamp</span>
-  <h2 class="section-title">Kişisel<br><em>çalışmalar.</em></h2>
+  <span class="section-label">04 &mdash; Bandcamp</span>
+  <h2 class="section-title">Kisisel<br><em>calismalar.</em></h2>
   <div class="bandcamp-grid fade-in">
     <div class="bandcamp-item">
       <iframe style="border:0;width:100%;height:470px;" src="https://bandcamp.com/EmbeddedPlayer/album=2058899455/size=large/bgcol=f4f1ec/linkcol=8b6f5e/tracklist=false/transparent=true/" seamless>
@@ -390,120 +404,168 @@
 
 <hr class="divider" />
 
-<!-- A/B KARŞILAŞTIRMA -->
+<!-- A/B KARSILASTIRMA -->
 <section id="karsilastirma">
-  <span class="section-label">05 — A/B Karşılaştırma</span>
-  <h2 class="section-title">Sesi<br><em>dönüştürmek.</em></h2>
+  <span class="section-label">05 &mdash; A/B Karsilastirma</span>
+  <h2 class="section-title">Sesi<br><em>donusturmek.</em></h2>
   <div class="ab-card fade-in">
     <div class="ab-track-title">True Enough</div>
-    <div class="ab-track-sub">Comped Ham Kayıt · Mixlenmiş Versiyon</div>
+    <div class="ab-track-sub">Comped Ham Kayit &middot; Mikslenmis Versiyon</div>
     <div class="ab-toggle">
-      <button class="ab-btn active" data-version="a" onclick="switchVersion('a')">A — Ham</button>
-      <button class="ab-btn" data-version="b" onclick="switchVersion('b')">B — Mix</button>
+      <button class="ab-btn active" data-version="a" onclick="switchVersion('a')">A &mdash; Ham</button>
+      <button class="ab-btn" data-version="b" onclick="switchVersion('b')">B &mdash; Mix</button>
     </div>
-    <div class="ab-version-label" id="ab-label">A — Comped Ham Kayıt</div>
+    <div class="ab-version-label" id="ab-label">A &mdash; Comped Ham Kayit</div>
     <audio class="ab-player" id="ab-audio" controls preload="none">
       <source src="audio/true enough comped.mp3" type="audio/mpeg" />
     </audio>
-    <div class="ab-info" id="ab-info">Sadece comp işlemi uygulanmış ham kayıt. Herhangi bir miks işlemi yapılmamıştır.</div>
+    <div class="ab-info" id="ab-info">Sadece comp islemi uygulanmis ham kayit. Herhangi bir miks islemi yapilmamistir.</div>
   </div>
 </section>
 
 <hr class="divider" />
 
-<!-- GALERİ -->
+<!-- GALERI -->
 <section id="galeri">
-  <span class="section-label">06 — Galeri</span>
-  <h2 class="section-title">Stüdyo<br><em>anları.</em></h2>
+  <span class="section-label">06 &mdash; Galeri</span>
+  <h2 class="section-title">Studyo<br><em>anlari.</em></h2>
   <div class="gallery-grid">
     <div class="gallery-item fade-in">
       <img src="images/hogan-studio.jpg" alt="Hogan Studio" />
       <div class="gallery-caption">Hogan Studio</div>
     </div>
     <div class="gallery-item fade-in" style="transition-delay:0.08s">
-      <img src="images/20241121_164734.jpg" alt="Stüdyo seansı" />
-      <div class="gallery-caption">Stüdyo seansı</div>
+      <img src="images/20241121_164734.jpg" alt="Studyo seansi" />
+      <div class="gallery-caption">Studyo seansi</div>
     </div>
     <div class="gallery-item fade-in" style="transition-delay:0.16s">
-      <img src="images/20241121_214414.jpg" alt="Stüdyo seansı" />
-      <div class="gallery-caption">Stüdyo seansı</div>
+      <img src="images/20241121_214414.jpg" alt="Studyo seansi" />
+      <div class="gallery-caption">Studyo seansi</div>
     </div>
     <div class="gallery-item fade-in" style="transition-delay:0.24s">
-      <img src="images/20241121_214425.jpg" alt="Stüdyo seansı" />
-      <div class="gallery-caption">Stüdyo seansı</div>
+      <img src="images/20241121_214425.jpg" alt="Studyo seansi" />
+      <div class="gallery-caption">Studyo seansi</div>
     </div>
   </div>
 </section>
 
 <hr class="divider" />
 
-<!-- İLETİŞİM -->
+<!-- ILETISIM -->
 <section id="iletisim">
   <div class="contact-grid">
     <div class="fade-in">
-      <span class="section-label">07 — İletişim</span>
-      <h2 class="section-title">Birlikte<br><em>çalışalım.</em></h2>
+      <span class="section-label">07 &mdash; Iletisim</span>
+      <h2 class="section-title">Birlikte<br><em>calisalim.</em></h2>
       <div class="contact-text">
-        <p>Yeni projeler, sorular veya iş birliği teklifleri için iletişime geçebilirsiniz.</p>
+        <p>Yeni projeler, sorular veya is birligi teklifleri icin iletisime gecebilirsiniz.</p>
       </div>
     </div>
     <div class="contact-links fade-in" style="transition-delay:0.15s">
-      <a class="contact-link" href="mailto:mert.gultknn&#64;gmail.com">
-        <div><div class="contact-link-label">E-Posta</div><div class="contact-link-value">mert.gultknn&#64;gmail.com</div></div>
-        <span class="contact-arrow">↗</span>
+      <a class="contact-link" href="mailto:mert.gultknn@gmail.com">
+        <div>
+          <div class="contact-link-label">E-Posta</div>
+          <div class="contact-link-value">mert.gultknn@gmail.com</div>
+        </div>
+        <span class="contact-arrow">&#8599;</span>
       </a>
       <a class="contact-link" href="tel:+905538906165">
-        <div><div class="contact-link-label">Telefon</div><div class="contact-link-value">+90 553 890 6165</div></div>
-        <span class="contact-arrow">↗</span>
+        <div>
+          <div class="contact-link-label">Telefon</div>
+          <div class="contact-link-value">+90 553 890 6165</div>
+        </div>
+        <span class="contact-arrow">&#8599;</span>
       </a>
       <a class="contact-link" href="https://instagram.com/ghoultekin" target="_blank" rel="noopener">
-        <div><div class="contact-link-label">Instagram</div><div class="contact-link-value">@ghoultekin</div></div>
-        <span class="contact-arrow">↗</span>
+        <div>
+          <div class="contact-link-label">Instagram</div>
+          <div class="contact-link-value">@ghoultekin</div>
+        </div>
+        <span class="contact-arrow">&#8599;</span>
       </a>
       <a class="contact-link" href="https://mertgultekin.bandcamp.com/" target="_blank" rel="noopener">
-        <div><div class="contact-link-label">Bandcamp</div><div class="contact-link-value">mertgultekin.bandcamp.com</div></div>
-        <span class="contact-arrow">↗</span>
+        <div>
+          <div class="contact-link-label">Bandcamp</div>
+          <div class="contact-link-value">mertgultekin.bandcamp.com</div>
+        </div>
+        <span class="contact-arrow">&#8599;</span>
       </a>
       <a class="contact-link" href="https://open.spotify.com/artist/6MOgtbOSKfLDkriUT7xVap" target="_blank" rel="noopener">
-        <div><div class="contact-link-label">Spotify — Vampire</div><div class="contact-link-value">Prodüksiyon çalışmaları</div></div>
-        <span class="contact-arrow">↗</span>
+        <div>
+          <div class="contact-link-label">Spotify</div>
+          <div class="contact-link-value">Vampire &mdash; Produksiyon</div>
+        </div>
+        <span class="contact-arrow">&#8599;</span>
       </a>
     </div>
   </div>
 </section>
 
 <footer>
-  <p>© 2025 Mert Gültekin</p>
-  <p>Ses Mühendisi · Prodüktör · Miks & Mastering</p>
+  <p>2025 Mert Gultekin</p>
+  <p>Ses Muhendisi &middot; Produktor &middot; Miks &amp; Mastering</p>
 </footer>
 
 <script>
+(function() {
   // FADE IN
-  const fadeEls = document.querySelectorAll('.fade-in');
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(el => { if (el.isIntersecting) { el.target.classList.add('visible'); observer.unobserve(el.target); } });
+  var fadeEls = document.querySelectorAll('.fade-in');
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
   }, { threshold: 0.1 });
-  fadeEls.forEach(el => observer.observe(el));
-  document.querySelectorAll('#hero .fade-in').forEach(el => setTimeout(() => el.classList.add('visible'), 100));
+  fadeEls.forEach(function(el) { observer.observe(el); });
+  document.querySelectorAll('#hero .fade-in').forEach(function(el) {
+    setTimeout(function() { el.classList.add('visible'); }, 100);
+  });
 
   // A/B PLAYER
-  const audio = document.getElementById('ab-audio');
-  const label = document.getElementById('ab-label');
-  const info  = document.getElementById('ab-info');
-  const versions = {
-    a: { src: 'audio/true enough comped.mp3', label: 'A — Comped Ham Kayıt', info: 'Sadece comp işlemi uygulanmış ham kayıt. Herhangi bir miks işlemi yapılmamıştır.' },
-    b: { src: 'audio/true enough mixed.mp3',  label: 'B — Mixlenmiş Versiyon', info: 'Tam miks işlemi uygulanmış final versiyon. EQ, kompresör, efektler ve stereo görüntü işlenmiştir.' }
+  var abAudio = document.getElementById('ab-audio');
+  var abLabel = document.getElementById('ab-label');
+  var abInfo  = document.getElementById('ab-info');
+  var abVersions = {
+    a: {
+      src:   'audio/true enough comped.mp3',
+      label: 'A - Comped Ham Kayit',
+      info:  'Sadece comp islemi uygulanmis ham kayit. Herhangi bir miks islemi yapilmamistir.'
+    },
+    b: {
+      src:   'audio/true enough mixed.mp3',
+      label: 'B - Mikslenmis Versiyon',
+      info:  'Tam miks islemi uygulanmis final versiyon. EQ, kompresör, efektler ve stereo goruntu islenmistir.'
+    }
   };
-  function switchVersion(v) {
-    const t = audio.currentTime, playing = !audio.paused;
-    document.querySelectorAll('.ab-btn').forEach(b => b.classList.toggle('active', b.dataset.version === v));
-    audio.src = versions[v].src; audio.load(); audio.currentTime = t;
-    if (playing) audio.play();
-    label.textContent = versions[v].label; info.textContent = versions[v].info;
-  }
+  window.switchVersion = function(v) {
+    var t = abAudio.currentTime;
+    var playing = !abAudio.paused;
+    document.querySelectorAll('.ab-btn').forEach(function(b) {
+      b.classList.toggle('active', b.getAttribute('data-version') === v);
+    });
+    abAudio.src = abVersions[v].src;
+    abAudio.load();
+    abAudio.currentTime = t;
+    if (playing) abAudio.play();
+    abLabel.textContent = abVersions[v].label;
+    abInfo.textContent  = abVersions[v].info;
+  };
 
   // NAV HIGHLIGHT
-  const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('.nav-links a');
-  window.addEventListener('scroll', () => {
-    let c
+  var sections = document.querySelectorAll('section[id]');
+  var navLinks = document.querySelectorAll('.nav-links a');
+  window.addEventListener('scroll', function() {
+    var current = '';
+    sections.forEach(function(s) {
+      if (window.scrollY >= s.offsetTop - 120) current = s.id;
+    });
+    navLinks.forEach(function(a) {
+      a.style.color = a.getAttribute('href') === '#' + current ? 'var(--charcoal)' : '';
+    });
+  });
+})();
+</script>
+</body>
+</html>
